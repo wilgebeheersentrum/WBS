@@ -1,0 +1,18 @@
+/* Bakkie-agtergrond vir die tuisblad */
+.hero {
+  background-image: linear-gradient(90deg, rgba(3, 8, 4, .96) 0%, rgba(3, 8, 4, .84) 42%, rgba(3, 8, 4, .36) 100%), url("wilgebakkies2.png");
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+.hero::before {
+  background: linear-gradient(90deg, rgba(5, 8, 5, .22), rgba(5, 8, 5, .05));
+}
+
+@media (max-width: 760px) {
+  .hero {
+    background-image: linear-gradient(180deg, rgba(3, 8, 4, .94) 0%, rgba(3, 8, 4, .72) 100%), url("wilgebakkies2.png");
+    background-position: center, 63% center;
+  }
+}
