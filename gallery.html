@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="af">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wilge Beheersentrum — Fotogalery van ons werk, toerusting en span.">
+  <title>Galery | Wilge Beheersentrum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>📍 <a href="https://www.google.com/maps/search/?api=1&query=26+Van+Reenen+St,+Frankfort,+9830" target="_blank" style="color: inherit; text-decoration: underline;">Van Reenenstraat 26, Frankfort</a></span>
+      <a href="tel:+27588131229">058 813 1229</a>
+      <a href="https://wa.me/27733444257" target="_blank">WhatsApp: 073 344 4257</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a href="index.html#tuis" class="logo">
+        <img src="images/wilge-logo.jpeg" alt="Wilge Beheersentrum">
+      </a>
+
+      <nav>
+  <a href="index.html#tuis">Tuis</a>
+  <a href="index.html#dienste">Dienste</a>
+  <a href="index.html#oor-ons">Oor ons</a>
+  <a href="index.html#produkte">Produkte</a>
+  <a href="index.html#personeel">Personeel</a>
+  <a href="gallery.html" class="active">Gallery</a>
+  <a href="index.html#kontak" class="contact-button">Kontak ons</a>
+</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section gallery-section" style="padding-top: 60px;">
+      <div class="wrap">
+        <div class="heading">
+          <div>
+            <p class="eyebrow green">ONS GALERY</p>
+            <h2>Foto's van ons<br><em>werk & toerusting.</em></h2>
+          </div>
+          <p>Kyk na van ons installasies, voertuie en span in aksie.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Voeg jou foto's hier onder by -->
+          <div class="gallery-item">
+            <img src="images/galer-3.jpg" alt="Foto 1" class="clickable-photo" onclick="openModal(this.src)">
+          </div>
+          <div class="gallery-item">
+            <img src="images/galery-2.jpg" alt="Foto 2" class="clickable-photo" onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Opspring-venster vir foto's -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgFull">
+  </div>
+
+  <footer>
+    <div class="wrap footer">
+      <img src="images/wilge-logo.jpeg" alt="Wilge Beheersentrum">
+      <p>© 2026 Wilge Beheersentrum. Alle regte voorbehou.</p>
+      <a href="index.html#tuis">Terug na Tuisblad ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    function openModal(imageSrc) {
+      document.getElementById("imageModal").style.display = "block";
+      document.getElementById("imgFull").src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
